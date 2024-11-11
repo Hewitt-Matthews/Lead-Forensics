@@ -1,0 +1,28 @@
+/*********************************************************************************************************
+ * 
+ * Client Logos
+ * 
+ ********************************************************************************************************/
+
+.client-logos-container {
+	display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.client-logos-container>div {
+	align-items: center;
+}
+
+.client-logos-container .splide__slide {
+	margin: 0 2em;
+}
+
+.client-logos-container .splide__slide img {
+	max-height: 50px;
+}
+
+.splide__arrows, .splide__pagination {
+    display: none;
+}

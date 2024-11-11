@@ -1,0 +1,92 @@
+/************************************************************************
+ * Containers
+ ************************************************************************/
+
+.question-container {
+    border-radius: 10px;
+    overflow: hidden;
+	margin-bottom: 2em;
+	box-shadow: var(--lfShadow);
+}
+
+/************************************************************************
+ * Question
+ ************************************************************************/
+
+.question-container .question {
+	position: relative;
+    display: flex;
+    justify-content: space-between;
+	background: #f2f2f2;
+	padding: 1em 2em;
+	border-radius: 10px;
+    overflow: hidden;
+}
+
+.question-container .question:hover {
+	cursor: pointer;
+}
+
+.question-container .question h3 {
+    padding: 0;
+	width: 85%;
+}
+
+
+
+/************************************************************************
+ * Answer
+ ************************************************************************/
+
+.answer {
+    max-height: 1000px;
+    transition: max-height 1000ms;
+    overflow: hidden;
+}
+
+.answer.hidden {
+    max-height: 0px!important;
+}
+
+.answer p {
+	padding: 1em 2em!important;
+}
+
+/************************************************************************
+ * Toggle
+ ************************************************************************/
+
+.question-toggle {
+    width: 20%;
+    background: var(--lfGradient);
+    max-width: 150px;
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    display: flex;
+   	align-items: center;
+	justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+	border-radius: 0px 10px 10px 0px;
+}
+
+.icon {
+    position: relative;
+}
+
+.icon .line {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+}
+
+.icon .line.two {
+    transform: rotate(90deg);
+	transition: 300ms;
+}
+
+.icon .line.two.active {
+    transform: rotate(0deg);
+}

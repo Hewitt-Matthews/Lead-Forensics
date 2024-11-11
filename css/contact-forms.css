@@ -1,0 +1,108 @@
+/* Contact Page */
+
+.contact-page-form .gform_body.gform-body {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-page-form .gform_body.gform-body .gfield {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page-form .gform_body.gform-body .gfield.gfield--width-half {
+	grid-column: 1 / -1;
+}
+
+.contact-page-form .gfield_label {
+	color: #fff;
+}
+
+.contact-page-form .gfield_label::after {
+	content: ":";
+}
+
+.contact-page-form .gfield_required {
+    display: none;
+}
+
+.contact-page-form .gfield input,
+.contact-page-form .gfield textarea, 
+.contact-page-form .gfield select {
+	color: #fff;
+    border: solid 1px #fff;
+    background: transparent;
+}
+
+.contact-page-form .gfield select option:not(option.gf_placeholder) {
+    color: #000!important;
+}
+
+.contact-page-form .gfield textarea {
+	max-height: 100px;
+}
+
+.contact-page-form .gfield-choice-input+label {
+    color: #fff;
+    font-weight: 400;
+}
+
+.contact-page-form .gfield input:autofill {
+  	color: #fff!important;
+    border: solid 1px #fff!important;
+    background: transparent!important;
+}
+
+.contact-page-form .gfield input::placeholder,
+.contact-page-form .gfield textarea::placeholder,
+.contact-page-form .gfield select .gf_placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-page-form input[type="submit"] {
+	position: relative;
+    border: solid 1px #fff;
+    background: transparent;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0.5rem 2.5rem 0.5rem 1.75rem;
+}
+
+.contact-page-form input[type="submit"]:hover {
+	cursor: pointer;
+}
+
+.contact-page-form .gform_footer span {
+	position: relative;
+}
+
+.contact-page-form .gform_footer span::after {
+    line-height: 1em;
+    content: "\35";
+	font-family: ETmodules!important;
+    position: absolute;
+	top: 50%;
+	color: #fff;
+    right: 15px;
+    transform: translateY(-51%);
+    font-size: 23px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    text-transform: none;
+    -webkit-font-feature-settings: "kern" off;
+    font-feature-settings: "kern" off;
+    font-variant: none;
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+.contact-page-form input[type="submit"]:hover + span::after {
+	right: 10px;
+}
+
+.contact-page-form .gform_footer {
+	text-align: center;
+}

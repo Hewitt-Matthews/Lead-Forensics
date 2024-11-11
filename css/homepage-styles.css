@@ -1,0 +1,25 @@
+/************************************************************************
+ * Home Hero
+ ************************************************************************/
+
+#page-container header .et_pb_section.et_pb_section_0_tb_header {
+	position: absolute;
+    width: 100%;
+    background: transparent!important;
+	background-image: none!important;
+}
+
+.home-gif img {
+	max-width: 500px;
+}
+
+#page-container .et_pb_button_module_wrapper {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+#page-container .et_pb_button_module_wrapper.et_pb_button_alignment_center,
+#page-container .et_pb_button_module_wrapper.et_pb_button_alignment_right {
+	display: block;
+	margin-right: 0;
+}

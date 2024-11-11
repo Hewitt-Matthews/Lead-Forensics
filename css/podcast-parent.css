@@ -1,0 +1,73 @@
+#page-container .cta-heading h2 {
+    font-size: min(54px, 8vw);
+    letter-spacing: -1px;
+}
+
+/***************************************
+ * Global Podcasts
+ ***************************************/
+
+.post-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-meta a.lf-btn {
+    margin-left: auto;
+	margin-top: 2em;
+	padding: 0;
+    border: none;
+    font-size: 20px;
+	position: static;
+}
+
+.post-meta a.lf-btn::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+.podcasts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 325px), 1fr));
+    gap: 2em;
+}
+
+.podcasts-container .podcast-info {
+	border-radius: 5px;
+    box-shadow: var(--lfShadow);
+    display: grid;
+	overflow: hidden;
+	position: relative;
+}
+
+.podcasts-container .podcast-info .post-meta {
+    padding: 2em;
+    background: #fff;
+}
+
+.podcasts-container .podcast-info .post-meta h3 {
+    font-size: 1.8em;
+}
+
+.podcasts-container .podcast-info .post-meta .category {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.podcasts-container .podcast-info .post-meta .category.sales, .podcasts-container .podcast-info .post-meta .category.sales a {
+	color: #D502FD!important;
+}
+
+.podcasts-container .podcast-info .post-meta .category.marketing, .podcasts-container .podcast-info .post-meta .category.marketing a {
+	color: var(--primary)!important;
+}
+
+.podcasts-container .podcast-info .post-meta .category.account-management {
+	color: var(--lfPurple);
+}
+
+.podcasts-container .podcast-info img {
+    width: 100%;
+}

@@ -1,0 +1,30 @@
+/* Search Results */
+
+.search-results .et_pb_ajax_pagination_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2em;
+}
+
+.search-results .et_pb_ajax_pagination_container article {
+	--padding: 2em;
+	padding: var(--padding);
+	border-radius: 8px;
+	box-shadow: var(--lfShadow);
+	margin: 0;
+	overflow: hidden;
+}
+
+.search-results .et_pb_ajax_pagination_container article .entry-featured-image-url {
+	margin: calc(var(--padding) / -1);
+	margin-bottom: 1em;
+}
+
+.search-results .et_pb_ajax_pagination_container article img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.search-results .et_pb_ajax_pagination_container article h2 {
+	font-size: min(24px, 8vw)!important;
+}

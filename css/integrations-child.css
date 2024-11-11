@@ -1,0 +1,89 @@
+.integration-title h1 span {
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 0.5em;
+}
+
+
+/********************************
+ * Instuctions List
+ ********************************/
+
+.instructions-container li {
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+/********************************
+ * What you'll need
+ ********************************/
+
+.what-youll-need {
+    box-shadow: var(--lfShadow);
+    padding: 2em 1.5em;
+    font-weight: 300;
+    background: #fff;
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.what-youll-need img {
+    max-width: 80px;
+    display: block;
+    margin: 0 auto 1em;
+}
+
+.what-youll-need h3 {
+    margin: 2em 0 1em;
+    padding: 0;
+}
+
+.what-youll-need ul {
+    padding-bottom: 0;
+}
+
+/************************************************************************
+ * Related Integrations Grid
+ ************************************************************************/
+
+.related-integrations-container {
+	position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2em 4em;
+	margin: 3em 0;
+}
+
+.related-integrations-container .integration {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--lfShadow);
+    background: #fff;
+	padding: 1em;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.related-integrations-container .integration h3 span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
+.related-integrations-container .integration img {
+    max-width: 200px;
+    max-height: 80px;
+    margin: auto;
+    display: block;
+}
+
+.related-integrations-container .integration>div {
+	padding-top: 1em;
+}
+
+.related-integrations-container .integration a {
+    margin-top: 1em;
+}

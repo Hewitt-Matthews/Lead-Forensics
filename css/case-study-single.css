@@ -1,0 +1,115 @@
+/******************************************
+ * Stats
+ ******************************************/
+
+.statistics-container {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 2em;
+}
+
+.statistics-container .stat-block {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2em;
+    border-radius: 5px;
+    background-size: 313%;
+	background-image: url(/wp-content/uploads/2021/11/LF-White-Wave0-min.png),linear-gradient(90deg, var(--lfPurple) 0%, var(--primary) 100%);
+}
+
+.statistics-container .stat-block:nth-child(1) {
+    background-position: left;
+}
+
+.statistics-container .stat-block:nth-child(2) {
+    background-position: center;
+}
+
+.statistics-container .stat-block:nth-child(3) {
+    background-position: right;
+}
+
+.stat-block h3 {
+    color: #fff;
+    font-size: 32px;
+}
+
+.stat-block h3 span {
+    font-size: 72px;
+    display: block;
+    line-height: 1;
+}
+
+.stat-block p {
+    color: #fff;
+}
+
+
+/******************************************
+ * Sidebar Widget
+ ******************************************/
+
+.sidebar-widget {
+    box-shadow: var(--lfShadow);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.sidebar-widget .logo {
+	position: relative;
+    background-size: cover!important;
+    background-position: center!important;
+    display: grid;
+    place-content: center;
+    padding: 3em 2em;
+	border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.sidebar-widget .logo::after {
+	content: "";
+	position: absolute;
+	background: linear-gradient(180deg, var(--lfPurple), var(--lfRed));
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0.5;
+    filter: brightness(1.5);
+}
+
+.sidebar-widget .logo img {
+	position: relative;
+	z-index: 2;
+	filter: brightness(0) invert(1);
+}
+
+.sidebar-widget .widget-info {
+    text-align: center;
+}
+
+
+.info-block {
+    margin: 1em 0;
+    position: relative;
+}
+
+.info-block::after {
+    content: "";
+    max-width: 130px;
+    width: 50%;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background: #000;
+}
+
+.info-block:nth-last-of-type(1)::after {
+	content: none;
+}

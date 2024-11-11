@@ -1,0 +1,64 @@
+/************************************************************************
+ * Integrations Grid
+ ************************************************************************/
+
+.integrations-container {
+	position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: 2em 4em;
+	margin-top: 2em;
+	padding: 0 1em;
+}
+
+.integrations-container .integration {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--lfShadow);
+    background: #fff;
+	padding: 1em;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.integrations-container .integration h3 span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
+.integrations-container .integration img {
+    max-width: 200px;
+    max-height: 80px;
+    margin: auto;
+    display: block;
+}
+
+.integrations-container .integration>div {
+	padding-top: 1em;
+}
+
+.integrations-container .integration a {
+    margin-top: 1em;
+}
+
+/* Trucation */
+
+.integrations-container.truncated {
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.integrations-container .see-more-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(0deg, #fff, #fff, rgba(255, 255, 255, 0));
+}

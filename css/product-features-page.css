@@ -1,0 +1,47 @@
+ /************************************************************
+ * Hero
+ ************************************************************/
+
+#hero-gif-section {
+	background-position: left;
+	height: 500px;
+}
+
+.service-gif {
+   	position: absolute;
+    top: 75%;
+    right: 0;
+    transform: translate(50%, -78%);
+}
+
+
+.service-gif img {
+    width: min(250px, 100%);
+	max-height: 250px;
+	filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.25));
+}
+
+@media only screen and (max-width: 980px) {
+	
+	.service-gif {
+		position: relative;
+		top: 75%;
+		right: 0;
+		transform: translate(50%, -78%);
+	}
+
+	#hero-gif-section {
+		background-position: left;
+		height: max(50vw, 300px);
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.service-gif img {
+		max-height: 250px;
+		width: min(150px, 100%)!important;
+	}
+	
+}

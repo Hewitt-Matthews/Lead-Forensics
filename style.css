@@ -1,0 +1,808 @@
+/* 
+ Theme Name:     Lead Forensics
+ Author:         Hewitt Matthews
+ Author URI:     https://www.hewittmatthews.co.uk
+ Template:       Divi
+ Version:        1.0.193
+ Description:   A Child Theme built by Hewitt Matthews
+ Wordpress Version: 5.8.2
+*/ 
+
+
+/* ----------- PUT YOUR CUSTOM CSS BELOW THIS LINE -- DO NOT EDIT ABOVE THIS LINE --------------------------- */ 
+
+/******************************************************************************************
+ * Global Styles
+ ******************************************************************************************/
+
+ :root {
+	--lfRed: #E51607;
+	--lfPurple: #5b00ce;
+	--lfGradient: linear-gradient(90deg, var(--lfPurple) 0%,var(--lfRed) 100%);
+	--lfShadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+	--primary: var(--lfRed);
+}
+
+#page-container {
+	overflow-y: visible!important;
+}
+
+/* .et_pb_section.hidden {
+	display:none!important;
+} */
+
+/* Font Styles */
+
+h1, h2, h3, h4, h5, h6,
+p,
+li,
+td,
+.et_pb_text_inner,
+.gform_description {
+	font-family: effra, sans-serif;
+}
+
+p, 
+li,
+td,
+.et_pb_text_inner {
+	font-weight: 300;
+}
+
+.gform_description {
+    font-weight: 400;
+}
+
+p {
+    padding-bottom: 0.75em;
+}
+
+#page-container h1:not(.home h1):not(.single-webinars h1) {
+    font-size: min(64px, 10vw);
+}
+
+.home #page-container h1 {
+    font-size: min(110px, 9vw);
+}
+
+#page-container h2:not(.gform_validation_errors>h2) {
+    font-size: min(36px, 8vw);
+	line-height: 1.2;
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.home #page-container h1 {
+		font-size: 12vw;
+	}
+
+}
+
+/*********************************
+ * Wave Background
+ *********************************/
+
+@media only screen and (min-width: 980px) {
+	
+	.wave-background:not(.home .wave-background):not(.wave-background.compliance-certs) {
+		background-size: 115vw 75vw!important;
+		background-position: 50% -14.5vw;
+	}
+	
+	/* How it works wave */
+	.page-id-1148 .wave-background:not(.home .wave-background) {
+		background-size: 115vw max(800px, 50vw)!important;
+	}
+	
+}
+
+@media only screen and (max-width: 980px) {
+	
+	.wave-background:not(.home .wave-background) {
+		background-size: 150% 800px!important;
+	}
+}
+
+/* Compliance Page */
+
+#post-1168 .compliance-container{    
+	display: flex;
+    gap: 2em 4em;
+    flex-wrap: wrap;
+}
+
+#post-1168 .compliance-container .certificate {
+    width: 350px;
+}
+
+
+/*********************************
+ * Button Styles
+ *********************************/
+
+#page-container .et_pb_button_module_wrapper {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+#page-container .et_pb_button_module_wrapper.et_pb_button_alignment_center,
+#page-container .et_pb_button_module_wrapper.et_pb_button_alignment_right {
+	display: block;
+	margin-right: 0;
+}
+
+#page-container .et_pb_button {
+    font-size: 16px!important;
+    padding: 0.75rem 3rem 0.75rem 2rem!important;
+    line-height: 1!important;
+    font-weight: 700;
+	font-family: 'effra', sans-serif;
+}
+#page-container .et_pb_button::after {
+	top: 50%;
+    transform: translateY(-51%);
+	font-size: 23px!important;
+    opacity: 1!important;
+    margin-left: 0!important;
+}
+
+#page-container .et_pb_button:hover::after {
+	transform: translateY(-51%) translateX(5px);
+}
+
+a.lf-btn {
+	font-family: 'effra', sans-serif;
+	position: relative;
+    color: #000;
+    padding: 0.25rem 2rem;
+    display: inline-block;
+    border: solid 1px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+a.lf-btn span {
+    font-size: 23px!important;
+    vertical-align: sub;
+    margin-left: 5px;
+}
+
+a.lf-btn.red {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+#page-container .et_pb_button::after,
+a.lf-btn .et-pb-icon {
+	transition: 250ms;
+}
+
+a.lf-btn:hover .et-pb-icon {
+	transform: translateX(5px);
+}
+
+
+/************************************************************************
+ * Services
+ ************************************************************************/
+
+.services-container {
+	position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2em;
+	margin: 3em 0 5em;
+}
+
+.services-container .service {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0px #bbb;
+   	display: grid;
+}
+
+.services-container .service .head {
+	display: flex;
+    align-items: center;
+	justify-content: space-between;
+    padding: 3em 2em;
+	background-size: 313%;
+	background-image: url(/wp-content/uploads/2021/12/LF-White-wave.svg),linear-gradient(90deg,#5b00ce 0%,#fe0000 100%);
+}
+
+.services-container .service:nth-child(1) .head {
+    background-position: left bottom;
+}
+
+.services-container .service:nth-child(2) .head {
+    background-position: center bottom;
+}
+
+.services-container .service:nth-child(3) .head {
+    background-position: right bottom;
+}
+
+.services-container .service .head h3 {
+	color: #fff;
+	font-size: 24px;
+}
+
+
+.services-container .service .head img {
+	max-width: 75px;
+	height: 75px;
+    object-fit: contain;
+}
+
+.services-container .service .meta {
+	padding: 2em;
+	background: #fff;
+}
+
+.services-container .service .meta a {
+    margin-top: 2em;
+}
+
+/************************************************************************
+ * Compliance Grid
+ ************************************************************************/
+
+.compliance-container {
+	position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2em 4em;
+}
+
+.compliance-container .certificate {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0px #bbb;
+   	display: grid;
+}
+
+.compliance-container .certificate .head {
+	display: flex;
+    align-items: center;
+	justify-content: space-between;
+    padding: 3em 2em;
+	background-size: 313%;
+	background-image: url(/wp-content/uploads/2021/12/LF-White-wave.svg),linear-gradient(90deg,#5b00ce 0%,#fe0000 100%);
+}
+
+.compliance-container .certificate:nth-child(3n+1) .head {
+    background-position: left bottom;
+}
+
+.compliance-container .certificate:nth-child(3n+2) .head {
+    background-position: center bottom;
+}
+
+.compliance-container .certificate:nth-child(3n+3) .head {
+    background-position: right bottom;
+}
+
+.compliance-container .certificate .head h3 {
+	color: #fff;
+	font-size: 24px;
+}
+
+
+.compliance-container .certificate .head img {
+	max-width: 75px;
+	height: 75px;
+    object-fit: contain;
+}
+
+.compliance-container .certificate .meta {
+	padding: 2em;
+	background: #fff;
+}
+
+.compliance-container .certificate .meta a {
+    margin-top: 2em;
+}
+
+
+/*********************************************
+ * Review Section
+ *********************************************/
+
+#review-section .review .et_pb_text_inner,
+#review-section .review .et_pb_text_inner p {
+    font-weight: 600;
+}
+
+#review-section .reviewer-image {
+	text-align: center;
+}
+
+#review-section .reviewer-image img {	
+	--imageSize: min(150px, 80vw);
+    width: var(--imageSize);
+    height: var(--imageSize);
+    object-fit: cover;
+}
+
+/*********************************
+ * G2 Badges
+ *********************************/
+
+.g2-badges-container img {
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.g2-badges-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,150px), 1fr));
+    gap: 2em;
+    align-items: center;
+}
+
+/*********************************
+ * Gravity Forms Styles
+ *********************************/
+
+body .gform_wrapper.gravity-theme .gfield textarea.large,
+.gfield textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.gform_confirmation_message {
+    padding: min(10vw, 2em);
+}
+
+/*********************************
+ * Pop Up Forms Styles
+ *********************************/
+
+#pop-up-form {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999!important;
+    place-items: center;
+	transform: scale(0);
+	display: none;
+}
+
+#pop-up-form.visible {
+    display: grid;
+	transform: scale(1);
+}
+
+#pop-up-form>div>div {
+    max-width: 550px;
+    width: 90%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: var(--lfShadow);
+    overflow: hidden;
+    max-height: 90vh;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.windows #pop-up-form>div>div::-webkit-scrollbar {
+	width: 10px;
+	border-radius: 10px;
+}
+
+.windows #pop-up-form>div>div::-webkit-scrollbar-track {
+	background: #eee;
+	border-radius: 10px;
+}
+
+.windows #pop-up-form>div>div::-webkit-scrollbar-thumb {
+	background: #bbb;
+	border-radius: 10px;
+}
+
+.windows #pop-up-form>div>div::-webkit-scrollbar-thumb:hover {
+	background: #aaa;
+}
+
+#pop-up-form .gform_fields {
+    display: flex;
+    flex-direction: column;
+}
+
+#pop-up-form .gform_heading {
+	color: #fff;
+	padding: 1em min(3em, 5vw);
+	background-size: cover;
+	background-image: url(/wp-content/uploads/2021/12/LF-White-wave.svg),linear-gradient(90deg, var(--lfPurple) 0%, var(--primary) 100%);
+}
+
+#pop-up-form .gform_heading h2 {
+	color: #fff;
+}
+
+#pop-up-form form {
+	padding: 1em min(3em, 5vw);
+}
+
+#pop-up-form input[type="submit"] {
+	position: relative;
+    color: #fff;
+	background: var(--primary);
+	border-color: var(--primary);
+    padding: 0.75rem 3rem;
+    display: inline-block;
+    border: solid 1px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#pop-up-form input[type="submit"]:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+
+#pop-up-form.iframe-popup>div>div {
+	width: 100%;
+	max-width: 100%;
+    min-width: 500px;
+	background: none;
+	box-shadow: none;
+	overflow: hidden;
+}
+
+#pop-up-form.iframe-popup-white>div>div {
+	width: 100%;
+	max-width: 100%;
+    min-width: 500px;
+	background: #fff;
+	padding: 20px 20px 20px 30px;
+	overflow: hidden;
+}
+
+.page-id-6747 #pop-up-form>div>div {
+	overflow: hidden;
+}
+
+#pop-up-form.expert-popup>div {
+	width: 600px;
+	max-width: 100%;
+}
+
+#pop-up-form.expert-popup>div>div {
+	padding: 20px;
+}
+
+/* #pop-up-form.iframe-popup .meetings-iframe-container {
+	height: 630px;
+} */
+
+@media only screen and (max-width: 768px) {
+	#pop-up-form.iframe-popup>div>div {
+		min-width: 100px;
+	}	
+}
+
+/*********************************
+ * Pop Up Forms Styles
+ *********************************/
+
+#demo-pop-up {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999999!important;
+    place-items: center;
+	transform: scale(0);
+	display: none;
+}
+
+#demo-pop-up.visible {
+    display: grid;
+	transform: scale(1);
+}
+
+#demo-pop-up>div>div {
+	width: min(1100px, 85vw);
+    background: #fff;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: var(--lfShadow);
+	max-height: 90vh;
+    overflow: auto;
+}
+
+#demo-pop-up input[type="submit"] {
+	position: relative;
+    color: #fff;
+	background: var(--primary);
+	border-color: var(--primary);
+    padding: 0.75rem 3rem;
+    display: inline-block;
+    border: solid 1px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#demo-pop-up input[type="submit"]:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+/*********************************
+ * Footer Styles
+ *********************************/
+
+footer .et_pb_row {
+    width: 95%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container .menus {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    flex: 1;
+	gap: 1em;
+}
+
+.footer-container .menus .footer-menu h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.footer-container .menus .footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container .menus .footer-menu ul a {
+    color: #1a1a1a!important;
+	font-size: 16px;
+	white-space: nowrap;
+}
+
+.footer-container .links {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	align-items: flex-end;
+}
+
+.footer-container .links>a {
+	background: transparent;
+    border-radius: 50px;
+	font-size: 15px;
+	padding: 1rem 1.5rem;
+	border: solid 1px;
+	color: #1a1a1a!important;
+	line-height: 1;
+	font-weight: 600;
+	
+}
+
+.footer-container .links>a span {
+	font-size: 1rem!important;
+    vertical-align: bottom;
+    margin-left: 5px;
+}
+
+.footer-container .links .demo-btn span {
+	transition: 250ms;
+}
+
+.footer-container .links .demo-btn:hover span {
+	transform: translateX(5px);
+}
+
+.footer-container .social-icons {
+    margin: 2em 0;
+	display: flex;
+    align-items: center;
+}
+
+.footer-container .social-icons span {
+    background: #1a1a1a;
+    border-radius: 50%;
+    color: #fff;
+   	font-size: 24px!important;
+    padding: 8px;
+    transition: 300ms;
+    margin-right: 10px;
+}
+
+.footer-container .social-icons a:last-child span {
+	margin-right: 0;
+}
+
+.footer-container .social-icons .tiktok span {
+    width: 40px;
+    height: 40px;
+    padding: 8px 10px 10px;
+    display: block;
+}
+
+.footer-container .social-icons .tiktok span path {
+	transition: 300ms;
+}
+
+.footer-container .social-icons .tiktok:hover path {
+    fill: #ee1d52!important;
+}
+
+.footer-container .social-icons a.facebook span:hover {
+	color: #3b5998;
+}
+
+.footer-container .social-icons a.twitter span:hover {
+	color: #00acee;
+}
+
+.footer-container .social-icons a.instagram span:hover {
+	color: #8a3ab9;
+}
+
+.footer-container .social-icons a.linkedin span:hover {
+	color: #0077b5;
+}
+
+.footer-container .social-icons a.youtube span:hover {
+	color: var(--lfRed);
+}
+
+.footer-container .accreditations {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container .accreditations img {
+    max-width: 100px;
+    margin-left: 2em;
+}
+
+.footer-container .accreditations a:nth-child(1) {
+    margin-left: 0;
+}
+
+ul#menu-footer-links-legal {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+#menu-footer-links-legal li {
+    position: relative;
+    margin-right: 13px;
+}
+
+#menu-footer-links-legal>li::after {
+    content: "|";
+	padding: 0 5px;
+    display: inline-block;
+    transform: translateY(2px);
+	position: absolute;
+}
+
+#menu-footer-links-legal>li:last-child::after {
+	content: none;
+}
+
+#menu-footer-links-legal>li a {
+	font-size: 15px;
+	color: #1a1a1a!important;
+	font-family: 'effra', sans-serif;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 980px) {
+	
+	.footer-container {
+		flex-direction: column;
+	}
+	
+	.footer-container .links {
+		align-items: flex-start;
+		margin-top: 1em;
+	}
+	
+	.footer-container .accreditations {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		gap: 2em;
+		width: 100%;
+	}
+
+	.footer-container .accreditations img {
+		 margin-left: 0;
+	}
+	
+}
+
+@media only screen and (max-width: 500px) {
+	
+	ul#menu-footer-links-legal {
+		flex-direction: column;
+	}
+
+	#menu-footer-links-legal>li::after {
+		content: none;
+	}
+	
+}
+
+
+/* Contact Form Validation */
+
+.validation_message {
+    color: #fff;
+    background: rgb(255 255 255 / 11%);
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0 1em!important;
+    border-width: 3px;
+	display: none;
+}
+
+.gfield_error [aria-invalid=true] {
+ 	border-width: 2px!important;
+}
+
+/* Correcting Divi Post Content */
+
+#post-content-module .et_pb_section_0,
+#post-content-module .et_pb_section_0>.et_pb_row {
+    padding-top: 0!important;
+}
+
+#post-content-module .et_pb_section .et_pb_row {
+    width: 100%;
+}
+
+#post-content-module .et_pb_section {
+    background: transparent;
+}
+
+/* Gravity Date picker mobile fix */
+
+#ui-datepicker-div {
+    padding: 1em;
+}
+
+#ui-datepicker-div .ui-state-default {
+    --pickerSize: 30px;
+    width: var(--pickerSize);
+    height: var(--pickerSize);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1;
+    display: grid;
+    align-items: center;
+}
+
+#ui-datepicker-div .ui-datepicker-unselectable .ui-state-default {
+	cursor: not-allowed;
+}
+
+/* Gravity Date picker mobile fix */
+@media only screen and (max-width: 500px) {
+	#ui-datepicker-div {
+		transform: scale(0.75) translate(-19%, 14%);
+	}
+}
+
+.website-built-by-hewitt-matthews {
+	display: none;
+}

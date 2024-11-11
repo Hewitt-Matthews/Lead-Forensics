@@ -1,0 +1,248 @@
+/*********************************************
+ * Plans Grid
+ *********************************************/
+
+.plans-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 4em;
+}
+
+.plans-container .plan {
+	box-shadow: var(--lfShadow);
+	border-radius: 5px;
+    overflow: hidden;
+	display: flex;
+    flex-direction: column;
+}
+
+.plans-container .plan .head {
+	background: var(--lfGradient);
+	background-size: 200%;
+	padding: 1.5em 2em;
+}
+
+@media only screen and (min-width: 971px) and  (max-width: 1245px) {
+	
+	.plans-container .plan .head {
+		height: 150px;
+	}
+	
+}
+
+@media only screen and (min-width: 840px) and (max-width: 970px) {
+	
+	.plans-container .plan .head {
+		height: 200px;
+	}
+	
+}
+
+.plans-container .plan:nth-child(1) .head {
+	background-position: left;
+}
+
+.plans-container .plan:nth-child(2) .head {
+	background-position: right;
+}
+
+.plans-container .plan .head>* {
+	color: #fff;
+}
+
+.plans-container .plan .head h2 {
+    padding: 0;
+}
+
+.plans-container .plan .head p {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.plans-container .plan .info {
+    background: #fff;
+    padding: 2em;
+    flex: 1;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+.plans-container .plan .info ul {
+	font-weight: 300;
+	list-style: none;
+	padding: 0;
+	margin: 1em 0 2em;
+}
+
+.plans-container .plan .info ul li {
+	position: relative;
+	font-size: 16px;
+	margin-bottom: 1em;
+	padding-left: 2.5em;
+}
+
+.plans-container .plan .info ul li::after {
+	content: "";
+    background: url(/wp-content/uploads/2021/12/Tick0.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 25px;
+	height: 100%;
+}
+
+/* Buttons */
+
+.plans-container .plan .lf-btn {
+    padding: 0.25rem 1rem;
+    margin-top: 10px;
+	margin-right: 10px;
+ 	font-size: 15px;
+    font-weight: 700;
+}
+
+.plans-container .plan .lf-btn.red {
+    background: var(--lfRed);
+    color: #fff;
+    border-color: var(--lfRed);
+}
+
+
+/*********************************************
+ * Pricing Table
+ *********************************************/
+
+#page-container .comparison-table {
+	min-width: 400px;
+	box-shadow: var(--lfShadow);
+	border-radius: 5px;
+    overflow-y: hidden;
+	position: relative;
+}
+
+#page-container .comparison-table tbody {
+    position: relative;
+}
+
+#page-container .comparison-table th {
+    padding: 1em 0;
+    font-size: 24px;
+    color: #1a1a1a;
+	min-width: 150px;
+}
+
+#page-container .comparison-table-footer td {
+    text-align: center;
+}
+
+#page-container .comparison-table th,
+#page-container .table-row td:not(.table-row td:nth-child(1)) {
+    text-align: center;
+}
+
+.table-row:nth-child(even) {
+    background: -webkit-gradient(linear, left top, right top, from(rgb(91 0 206 / 15%)),to(rgb(254 0 0 / 15%)));
+    background: -o-linear-gradient(left, rgb(91 0 206 / 15%) 0%,rgb(254 0 0 / 15%) 100%);
+    background: linear-gradient(90deg, rgb(91 0 206 / 15%) 0%,rgb(254 0 0 / 15%) 100%);
+	background-attachment: fixed;
+}
+
+.table-row:nth-child(odd) {
+    background: #fff;
+}
+
+.table-row.hidden {
+    display: none;
+}
+
+.table-row .available-tick {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #28CE29;
+    margin: 0 auto;
+    position: relative;
+    transform: rotate(-45deg);
+}
+
+.table-row .available-tick::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 2px;
+    background: #28CE29;
+    position: absolute;
+    bottom: 3px;
+    left: -2px;
+    transform: rotate(90deg);
+}
+
+.table-row .not-available-line {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #000;
+    margin: 0 auto;
+}
+
+.table-row td:nth-child(1) {
+    width: 50%;
+}
+
+.benefit-desc {
+	position: relative;
+	display: inline-block;
+}
+
+.benefit-desc.underline {
+    text-decoration: underline dotted #ccc 2px;
+}
+
+.benefit-desc.underline:hover {
+	cursor: pointer;
+}
+
+.benefit-desc:hover .benefit-desc-hover {
+	opacity: 1;
+	transform: scale(1) translateX(-50%);
+}
+
+.benefit-desc .benefit-desc-hover {
+    position: absolute;
+    background: #ccccccf0;
+	font-size: 14px;
+    font-weight: 600;
+    padding: 0.25em 1em!important;
+    border-radius: 5px;
+    opacity: 0;
+    left: 50%;
+    transform: scale(0) translateX(-50%);
+    top: -150%;
+    width: max-content;
+    transition: opacity 250ms;
+}
+
+/* Table Footer */
+
+.comparison-table-footer.table-expand {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	height: 250px;
+    background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0));
+}
+
+.comparison-table-footer.table-expand td {
+	width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-top: none;
+}

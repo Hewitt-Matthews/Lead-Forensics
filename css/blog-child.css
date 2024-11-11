@@ -1,0 +1,366 @@
+/* Correcting Divi Styles */
+
+#post-content-row .et_pb_section,
+#post-content-row .et_pb_section:not(.stats-container)>.et_pb_row {
+    padding-top: 0!important;
+}
+
+#post-content-row .et_pb_section:last-child {
+    padding-bottom: 0!important;
+}
+
+#post-content-row .et_pb_section .et_pb_row {
+    width: 100%;
+}
+
+#post-content-row .et_pb_section {
+    background: transparent;
+}
+
+.single-post h3,
+.single-post h4,
+.single-post h5,
+.single-post b:not(h2 b) {
+    font-weight: 500;
+}
+
+/*********************************************************
+ * CTA heading
+ *********************************************************/
+
+#newsletter-cta-heading h2 {
+    font-size: min(54px, 10vw)!important;
+    letter-spacing: -1px;
+}
+
+/*********************************************************
+ * Post Contents
+ *********************************************************/
+
+.contents-list {
+	margin-top: 1em;
+	list-style: none!important;
+}
+
+.contents-list li {
+	margin-bottom: 0.75em;
+	font-weight: 700;
+}
+
+.contents-list li::marker {
+	content: none;
+}
+
+.contents-list li span {
+    display: inline-grid;
+	place-content: center;
+    --listSize: 30px;
+    width: var(--listSize);
+    height: var(--listSize);
+    border: solid 1px;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-right: 1em;
+}
+
+
+/************************************************************************************
+ * Post content Widgets
+ ************************************************************************************/
+
+/******************************************
+ * Review Widget
+ ******************************************/
+
+#review-row {
+    margin-top: 2em;
+    display: flex;
+}
+
+#review-row::before,
+#review-row::after {
+	content: "''";
+	position: absolute;
+	font-size: 100px;
+	line-height: 1;
+	color: var(--primary);
+	display: inline-block;
+	font-weight: 800;
+}
+
+#review-row::before {	
+	left: 0;
+	top: 0;	
+	max-height: 70px;
+	transform: rotateZ(180deg) skewX(-17deg) scaleX(0.8) translateY(25%);
+}
+
+#review-row::after {
+    right: 5%;
+    bottom: 1em;	
+	max-height: 50px;
+	margin-right: 15px;
+	transform: skewX(-17deg) scaleY(1.15) scaleX(0.9) translateY(-7px);
+	visibility: visible;
+    height: auto;
+    width: auto;
+}
+
+#review-row .review-heading p {
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 980px) {
+	
+	#review-row::before,
+	#review-row::after {
+		font-size: 75px;
+	}
+	
+	#review-row::before {
+		top: -0.5em;
+	}
+
+	
+}
+
+
+/************************************************************************************
+ * Sidebar Widgets
+ ************************************************************************************/
+
+#widgets-container, 
+#widgets-container>div {
+    height: 100%;
+}
+
+#widgets-container .widget:last-child.try-lf-widget {
+    margin-bottom: 0;
+    position: sticky;
+    top: 50px;
+}
+
+.widget {
+    box-shadow: var(--lfShadow);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0.5rem;
+	background: #fff;
+	margin-bottom: 2em;
+}
+
+.widget .head {
+	display: flex;
+    align-items: center;
+	background-image: url(/wp-content/uploads/2021/12/LF-White-wave.svg),linear-gradient(90deg,#5b00ce 0%,#fe0000 100%);
+	background-size: cover;
+	background-position: center;
+}
+
+.widget .head h3 {
+	color: #fff;
+	padding: 0;
+}
+
+.widget .head,
+.widget .body {
+	padding: 2em;
+}
+
+.widget .lf-btn {
+	margin-top: 1em;
+}
+
+/******************************************
+ * Free Trial Widget
+ ******************************************/
+
+.widget.free-trial-widget {
+	padding: 0;
+}
+
+.widget.free-trial-widget .head h3 {
+	font-size: 26px;
+}
+
+/******************************************
+ * About LF Widget
+ ******************************************/
+
+.about-lf-widget .logo {
+	position: relative;
+    background-size: cover!important;
+    background-position: center!important;
+    display: grid;
+    place-content: center;
+    padding: 3em 2em;
+	border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.about-lf-widget .logo::after {
+	content: "";
+	position: absolute;
+	background: linear-gradient(180deg, var(--lfPurple), var(--primary));
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0.5;
+    filter: brightness(1.5);
+}
+
+.about-lf-widget .logo img {
+	position: relative;
+	z-index: 2;
+	max-width: 200px;
+	filter: brightness(0) invert(1);
+}
+
+.about-lf-widget .widget-info {
+    padding: 1em;
+}
+
+/******************************************
+ * Try LF Widget
+ ******************************************/
+
+.widget.try-lf-widget {
+	padding: 0;
+}
+
+/******************************************
+ * Related Posts Widget
+ ******************************************/
+
+.related-posts-widget.widget {
+    box-shadow: none;
+    border-radius: 0px;
+    overflow: visible;
+    padding: 0;
+}
+
+.related-posts-widget.widget .related-posts-container .post-info {
+	display: grid;
+    box-shadow: var(--lfShadow);
+    border-radius: 5px;
+    overflow: hidden;
+	background: #fff;
+	margin-bottom: 2em;
+}
+
+
+.related-posts-widget.widget .related-posts-container .post-info img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.related-posts-widget.widget .related-posts-container .post-info .post-meta {
+    padding: 1em 2em 2em;
+}
+
+.related-posts-container .post-info .post-meta .category {
+    font-weight: 700;
+    font-size: 18px;
+	margin-bottom: 1em;
+}
+
+.related-posts-container .post-info .post-meta .category.sales {
+	color: #D502FD;
+}
+
+.related-posts-container .post-info .post-meta .category.marketing,
+.related-posts-container .post-info .post-meta .category.industry-news {
+	color: var(--primary);
+}
+
+.related-posts-container .post-info .post-meta .category.account-management,
+.related-posts-container .post-info .post-meta .category.company-news {
+	color: var(--lfPurple);
+}
+
+/************************************************************************
+ * Related Posts 3 loop
+ ************************************************************************/
+
+.related-posts-container {
+	position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2em;
+}
+
+.related-posts-container .post-info {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0px #bbb;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.related-posts .post-info .head {
+	position:relative;
+	overflow: hidden;
+	display: flex;
+    align-items: center;
+	justify-content: space-between;
+    padding: 3em 2em;
+	background-size: cover!important;
+}
+
+.related-posts-container .post-info img {
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.related-posts-container .post-info .post-meta {
+	padding: 2em;
+	text-align: left;
+	display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.related-posts-container .post-info .post-meta h3 {
+	font-size: 24px;
+}
+
+.related-posts-container .post-info .post-meta a {
+    margin-top: 2em;
+}
+
+/************************************************************************
+ * Stats Call Out
+ ************************************************************************/
+
+.stats-container .number {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-container .number>div {
+    font-size: min(100px, 12vw);
+    line-height: 1;
+    background: -webkit-linear-gradient(0deg,#5b00ce 0%,#fe0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.stats-container .text {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.stats-container .text>div {
+	font-size: min(32px, 9vw);
+	font-weight: 600;
+}

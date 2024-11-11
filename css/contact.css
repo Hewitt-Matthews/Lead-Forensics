@@ -1,0 +1,129 @@
+/************************************************************************
+ * Gravity Confirmation message
+ ************************************************************************/
+
+.gform_confirmation_message {
+    background: #fff;
+    max-width: 700px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: var(--lfShadow);
+}
+
+/************************************************************************
+ * Teams
+ ************************************************************************/
+
+.teams-container {
+	position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(325px, 100%), 1fr));
+    gap: 2em;
+	margin: 3em 0 5em;
+}
+
+.teams-container .team {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0px #bbb;
+   	display: grid;
+}
+
+.teams-container .team .head {
+	display: flex;
+    align-items: center;
+	justify-content: space-between;
+    padding: 3em 2em;
+	background-size: 313%;
+	background-image: url(/wp-content/uploads/2021/12/LF-White-wave.svg),linear-gradient(90deg,#5b00ce 0%,#fe0000 100%);
+}
+
+.teams-container .team:nth-child(1) .head {
+    background-position: left bottom;
+}
+
+.teams-container .team:nth-child(2) .head {
+    background-position: center bottom;
+}
+
+.teams-container .team:nth-child(3) .head {
+    background-position: right bottom;
+}
+
+.teams-container .team .head h3 {
+	color: #fff;
+	font-size: 24px;
+}
+
+.teams-container .team .meta {
+	padding: 2em;
+	background: #fff;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.teams-container .team .meta a {
+    margin-top: 2em;
+}
+
+
+/* Prevent button going to 2 lines on larger devices */
+@media only screen and (min-width: 768px) {
+	.teams-container .team .meta a {
+		white-space: nowrap;
+	}
+}
+
+/************************************************************************
+ * Offices
+ ************************************************************************/
+
+.offices-container {
+	position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
+    gap: 2em;
+	margin: 3em 0 5em;
+}
+
+.offices-container .office {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0px #bbb;
+   	display: grid;
+}
+
+.offices-container .office .head {
+	height: 200px;
+	background-size: cover!important;
+    background-position: center!important;
+}
+
+.offices-container .office .meta {
+	padding: 2em;
+	background: #fff;
+	display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.offices-container .office .meta h3 {
+	font-size: 24px;
+}
+
+.offices-container .office .meta .phone {
+    color: #1a1a1a;
+    margin-top: 1em;
+    font-weight: 300;
+    font-family: 'effra', sans-serif;
+}
+
+.offices-container .office  .meta a.lf-btn {
+    margin-top: 2em;
+	border: none;
+    padding: 0;
+    align-self: flex-end;
+}

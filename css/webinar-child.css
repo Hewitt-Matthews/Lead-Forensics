@@ -1,0 +1,134 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#webinar-details .et_pb_button_module_wrapper {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+/************************************************************************
+ * Transcript
+ ************************************************************************/
+
+#webinar-transcript {
+    max-height: 1000px;
+    transition: max-height 1000ms;
+    overflow: hidden;
+}
+
+#webinar-transcript.hidden {
+    max-height: 0px!important;
+}
+
+
+/************************************************************************
+ * Related Webinars
+ ************************************************************************/
+
+.webinars-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.webinars-container .post-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.webinars-container .post-meta a.lf-btn {
+    margin-left: auto;
+	margin-top: 2em;
+	padding: 0;
+    border: none;
+    font-size: 20px;
+}
+
+.webinars-container .webinar-info {
+	border-radius: 5px;
+    box-shadow: var(--lfShadow);
+    display: grid;
+	overflow: hidden;
+}
+
+.webinars-container .webinar-info .post-meta {
+    padding: 2em;
+    background: #fff;
+}
+
+.webinars-container .webinar-info .post-meta .category {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.webinars-container .webinar-info .post-meta .category.sales {
+	color: #D502FD;
+}
+
+.webinars-container .webinar-info .post-meta .category.marketing {
+	color: var(--primary);
+}
+
+.webinars-container .webinar-info .post-meta .category.account-management {
+	color: var(--lfPurple);
+}
+
+.webinars-container .webinar-info img {
+    width: 100%;
+}
+
+/************************************************************************
+ * Key Speakers
+ ************************************************************************/
+
+.speakers-container {
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+	margin-top: 1.5em;
+}
+
+@media only screen and (max-width: 980px) {
+	.speakers-container {
+    	grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+	}
+}
+
+.speakers-container .speaker {
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: var(--lfShadow);
+	max-width: 200px;
+}
+
+.speakers-container h3,
+.speakers-container p {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: min(7vw, 23px);
+    line-height: 1.2;
+}
+
+.speakers-container h3 {
+    font-size: min(8vw, 26px);
+    font-weight: 600;
+}
+
+
+.speakers-container .speaker .head {
+	flex: 1;
+	padding: 1em;
+	background-size: cover;
+	background-image: url(/wp-content/uploads/2021/12/LF-White-wave.svg),linear-gradient(90deg, var(--lfPurple) 0%, var(--primary) 100%);
+}
+
+.speakers-container .speaker img {
+    width: 100%;
+	max-height: 350px;
+}

@@ -1,0 +1,132 @@
+ /************************************************************
+ * Hero
+ ************************************************************/
+
+.service-gif img:not(.postid-139 .service-gif img):not(.postid-4478 .service-gif img) {
+    width: min(350px, 100%);
+	max-height: 400px;
+}
+
+/* Marketing GIF position */
+
+.postid-150 .service-gif {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(80%, -50%);
+}
+
+.postid-150 .service-gif img {
+	width: auto!important;
+}
+
+/* Account Management GIF position */
+
+.postid-4478 #hero-gif-section {
+    align-self: center;
+}
+
+
+@media only screen and (max-width: 980px) {
+	
+	.postid-150 .service-gif {
+		position: relative;
+		top: 50%;
+		right: 0;
+		transform: translate(70%, 0%);
+	}
+
+	.postid-150 #hero-gif-section {
+		background-position: left;
+		background-size: 60vw;
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.service-gif img {
+		max-height: 50vw;
+	}
+	
+}
+
+@media only screen and (max-width: 500px) {
+	
+	.postid-150 .service-gif img {
+		width: auto!important;
+		max-height: 250px!important;
+	}
+}
+
+ /************************************************************
+ * Benefits Container
+ ************************************************************/
+
+.benefits-container .benefit {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+	margin-bottom: 3em;
+}
+
+.benefits-container .benefit .content {
+    font-weight: 300;
+}
+
+.benefits-container .benefit>div {
+    flex: 1 1 48%;
+}
+
+.benefits-container .benefit>div:nth-child(1) {
+    max-width: 50%;
+}
+
+.benefits-container .benefit:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.benefits-container .benefit:nth-child(even)>div:nth-child(2),
+.benefits-container .benefit:nth-child(odd)>div:nth-child(1) {
+    margin-right: 2em;
+}
+
+.benefits-container .benefit a.lf-btn.case-study-link {
+    display: block;
+    padding: 0;
+    margin-top: 1em;
+    border: none;
+    color: var(--lfRed);
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.benefits-container .benefita.lf-btn.case-study-link:hover {
+    text-decoration: underline;
+}
+
+.benefits-container .benefit a.lf-btn.demo-link {
+    background-color: var(--lfRed);
+    color: #fff;
+    margin-top: 1em;
+    padding: 0.5rem 2rem;
+}
+
+@media only screen and (max-width: 980px) {
+	
+	.benefits-container .benefit {
+		display: grid;
+		gap: 2em;
+	}
+	
+	.benefits-container .benefit .gif-only {
+		margin: 0!important;
+	}
+	
+	.benefits-container .benefit>div:nth-child(1) {
+		max-width: 100%;
+		margin-bottom: 1em;
+	}
+	
+}
