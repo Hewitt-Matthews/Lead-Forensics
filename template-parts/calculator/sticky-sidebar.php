@@ -1,3 +1,7 @@
+<?php
+// Show sidebar by default, hide only when checkbox is checked
+if (!get_field('hide_sticky_sidebar')) : ?>
+
 <style>
 
     .sticky-sidebar {
@@ -8,6 +12,7 @@
 		transform-origin: top;
 		transform: rotateZ(270deg) translateY(31px);
     	transition: 300ms;
+		display: block;
     }
 	
 	.sticky-sidebar.active {
@@ -154,3 +159,11 @@
 	})
 
 </script>
+
+<?php else: ?>
+<style>
+    .sticky-sidebar {
+        display: none !important;
+    }
+</style>
+<?php endif; ?>
